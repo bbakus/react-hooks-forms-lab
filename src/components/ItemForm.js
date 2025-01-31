@@ -8,14 +8,13 @@ function ItemForm(props) {
     event.preventDefault();
 
     const newItem = {
-      id: String(Math.random()), // Temporary ID generation as uuid wasn't mentioned in earlier context
+      id: String(Math.random()),
       name,
       category
     };
 
     props.onItemFormSubmit(newItem);
 
-    // Reset form after submission
     setName("");
     setCategory("Produce");
   };
